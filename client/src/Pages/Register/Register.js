@@ -88,7 +88,7 @@ const Register = () => {
         toast.success('Profile updated');
       })
       .catch((error) => {
-        console.error(error);
+        console.error(error.message.slice(22, -2));
       });
   };
 

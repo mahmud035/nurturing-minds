@@ -1,5 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom';
 import Main from '../../Layout/Main';
+import Profile from '../../Others/Profile/Profile';
 import AddService from '../../Pages/AddService/AddService';
 import Blog from '../../Pages/Blog/Blog';
 import ErrorPage from '../../Pages/ErrorPage/ErrorPage';
@@ -8,6 +9,7 @@ import Services from '../../Pages/Home/Services/Services';
 import Login from '../../Pages/Login/Login';
 import MyReview from '../../Pages/MyReview/MyReview';
 import Register from '../../Pages/Register/Register';
+import PrivateRoutes from '../PrivateRoutes/PrivateRoutes';
 
 const router = createBrowserRouter([
   {
@@ -46,6 +48,14 @@ const router = createBrowserRouter([
       {
         path: '/register',
         element: <Register></Register>,
+      },
+      {
+        path: '/profile',
+        element: (
+          <PrivateRoutes>
+            <Profile></Profile>
+          </PrivateRoutes>
+        ),
       },
     ],
   },
