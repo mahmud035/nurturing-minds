@@ -40,7 +40,7 @@ const Header = () => {
                   className="d-inline-block align-center me-2"
                 />
                 <span className="d-inline-block fw-semibold text-white fs-4">
-                  BrainStormy
+                  Nurturing Minds
                 </span>
               </Navbar.Brand>
             </Link>
@@ -66,7 +66,7 @@ const Header = () => {
                         className="d-inline-block align-center me-2"
                       />
                       <span className="d-inline-block text-white">
-                        BrainStormy
+                        Nurturing Minds
                       </span>
                     </Navbar.Brand>
                   </Link>
@@ -82,10 +82,14 @@ const Header = () => {
                   >
                     Home
                   </NavLink>
-                  <NavLink to="/courses">Courses</NavLink>
+                  <NavLink to="/services">Services</NavLink>
                   <NavLink to="/blog">Blog</NavLink>
-                  <NavLink to="/faq">FAQ</NavLink>
-                  {user?.email && <NavLink to="/checkout">Checkout</NavLink>}
+                  {user?.email && (
+                    <>
+                      <NavLink to="/my-review">My Review</NavLink>
+                      <NavLink to="/add-service">Add Service</NavLink>
+                    </>
+                  )}
 
                   <div
                     onClick={() => setDarkMode(!darkMode)}
