@@ -10,7 +10,6 @@ import Appointment from '../Appointment/Appointment';
 const Home = () => {
   return (
     <div>
-      <p>Home</p>
       <Banner></Banner>
       <About></About>
       <Services></Services>
