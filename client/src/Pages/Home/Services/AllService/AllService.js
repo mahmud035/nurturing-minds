@@ -7,7 +7,7 @@ import Col from 'react-bootstrap/Col';
 import ServiceSummaryCard from '../ServiceSummaryCard/ServiceSummaryCard';
 
 const AllService = () => {
-  const services = useLoaderData();
+  const services = useLoaderData() || [];
 
   useEffect(() => {
     window.scrollTo(0, 0);
