@@ -1,12 +1,120 @@
 import React from 'react';
 import useSetTitle from '../../hooks/useSetTitle';
 import './AddService.css';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import { toast } from 'react-toastify';
 
 const AddService = () => {
   useSetTitle('Add Service');
+
+  // st emailRef = useRef(user?.email);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+    const serviceName = form.serviceName.value;
+    const price = form.price.value;
+    const imageURL = form.photoURL.value;
+    const description = form.description.value;
+    // console.log(serviceName, price, imageURL, description);
+
+    const service = { serviceName, price, imageURL, description };
+
+    fetch('http://localhost:5000/service', {
+      method: 'POST',
+      headers: { 'content-Type': 'application/json' },
+      body: JSON.stringify(service),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.acknowledged) {
+          toast.success('Service Added Successfully');
+        }
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  };
+
   return (
     <div>
       <h1>Add Service</h1>
+      <div className="profile-page py-5">
+        <div className="min-vh-100 container pb-5">
+          <div>
+            <div className="profile-page-form-container">
+              <div>
+                <h4 className="py-4 text-center fs-2">Add a New Service</h4>
+                <p className="text-center w-75 mx-auto">
+                  On the other hand, we denounce with righteous indignation and
+                  dislike men who are so beguiled and demoralized
+                </p>
+              </div>
+              <Form
+                onSubmit={handleSubmit}
+                className=" d-flex flex-column justify-content-center p-4 "
+              >
+                <Form.Group className="mb-3 " controlId="formBasicPassword">
+                  <Form.Label className="fw-semibold">Service Name</Form.Label>
+                  <Form.Control
+                    type="text"
+                    name="serviceName"
+                    placeholder="service name"
+                    required
+                  />
+                </Form.Group>
+
+                <Form.Group className="mb-3 " controlId="formBasicEmail">
+                  <Form.Label className="fw-semibold">Price</Form.Label>
+                  <Form.Control
+                    type="text"
+                    name="price"
+                    placeholder="price"
+                    required
+                  />
+                </Form.Group>
+
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Label className="fw-semibold">Photo URL </Form.Label>
+                  <Form.Control
+                    type="text"
+                    name="photoURL"
+                    placeholder="Photo URL"
+                    required
+                  />
+                </Form.Group>
+
+                <Form.Group
+                  className="mb-3"
+                  controlId="exampleForm.ControlTextarea1"
+                >
+                  <Form.Label>Description</Form.Label>
+                  <Form.Control
+                    as="textarea"
+                    rows={3}
+                    name="description"
+                    placeholder=" description"
+                    required
+                  />
+                </Form.Group>
+
+                <div className="d-flex justify-content-center  mt-3">
+                  <Button
+                    className="fw-semibold btn-register px-5"
+                    variant="primary"
+                    type="submit"
+                  >
+                    ADD SERVICE
+                  </Button>
+                </div>
+              </Form>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

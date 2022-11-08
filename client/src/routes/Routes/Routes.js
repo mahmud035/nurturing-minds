@@ -44,11 +44,19 @@ const router = createBrowserRouter([
       },
       {
         path: '/my-review',
-        element: <MyReview></MyReview>,
+        element: (
+          <PrivateRoutes>
+            <MyReview></MyReview>
+          </PrivateRoutes>
+        ),
       },
       {
         path: '/add-service',
-        element: <AddService></AddService>,
+        element: (
+          <PrivateRoutes>
+            <AddService></AddService>
+          </PrivateRoutes>
+        ),
       },
       {
         path: '/login',
