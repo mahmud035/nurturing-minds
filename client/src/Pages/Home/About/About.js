@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const About = () => {
   return (
     <div className="container pt-5">
-      <div className="card mb-3">
+      <div className="card mb-3 border-0">
         <div className="row g-0">
           <div className="col-md-4">
             <img src={person} className="img-fluid rounded-start" alt="..." />
