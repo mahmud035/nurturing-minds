@@ -27,7 +27,7 @@ const Header = () => {
 
   return (
     <>
-      {['lg'].map((expand) => (
+      {['xl'].map((expand) => (
         <Navbar key={expand} expand={expand} className="py-3 navbar-container">
           <Container>
             <Link to="/">
@@ -90,6 +90,7 @@ const Header = () => {
                       <NavLink to="/add-service">Add Service</NavLink>
                     </>
                   )}
+                  <NavLink to="/book-session">Appointment</NavLink>
 
                   <div
                     onClick={() => setDarkMode(!darkMode)}
