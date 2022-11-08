@@ -15,9 +15,9 @@ const AllService = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  console.log(services);
+  // console.log(services);
   return (
-    <Container>
+    <Container className="py-5">
       <Row>
         <Col>
           <div className="text-center">
