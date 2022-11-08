@@ -45,7 +45,7 @@ const About = () => {
                 <strong>Call me:</strong> +8801254 256 659
               </p>
               <p>
-                <strong>Find me here:</strong> Smart tower, 254 New Yourk
+                <strong>Find me here:</strong> Rupayan Trade Center, 3D, Dhaka
               </p>
             </div>
           </div>

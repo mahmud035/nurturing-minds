@@ -1,4 +1,9 @@
 .leaflet-container {
-  width: 500px;
+  width: 100vw;
   height: 500px;
+}
+
+.contact-section-text {
+  background-color: #1a374df6;
+  color: #fff;
 }
