@@ -4,13 +4,13 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
 const ServiceSummaryCard = ({ service }) => {
-  const { service_name, price, image_url, description } = service;
+  const { serviceName, price, imageURL, description } = service;
   return (
     <div>
       <Card className="service-summary-card h-100">
-        <Card.Img variant="top" src={image_url} />
+        <Card.Img variant="top" src={imageURL} />
         <Card.Body>
-          <Card.Title>{service_name}</Card.Title>
+          <Card.Title>{serviceName}</Card.Title>
           <Card.Text>{description.slice(0, 100)}</Card.Text>
           <h3>
             Price: <span>{price}</span>
