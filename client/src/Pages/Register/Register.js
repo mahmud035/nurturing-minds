@@ -8,12 +8,14 @@ import { Link, useNavigate } from 'react-router-dom';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import { FcGoogle } from 'react-icons/fc';
 import { BsGithub } from 'react-icons/bs';
+import useSetTitle from '../../hooks/useSetTitle';
 
 const Register = () => {
   const { createUser, googleSignIn, githubSignIn, updateUserProfile } =
     useContext(AuthContext);
 
   const navigate = useNavigate();
+  useSetTitle('Register');
 
   useEffect(() => {
     window.scrollTo(0, 0);

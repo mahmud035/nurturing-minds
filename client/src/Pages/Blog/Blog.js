@@ -1,8 +1,10 @@
 import React from 'react';
 import './Blog.css';
 import Accordion from 'react-bootstrap/Accordion';
+import useSetTitle from '../../hooks/useSetTitle';
 
 const Blog = () => {
+  useSetTitle('Blog');
   return (
     <div className="accordion-container">
       <h1>Questions & Answer</h1>

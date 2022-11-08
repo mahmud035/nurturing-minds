@@ -8,12 +8,15 @@ import { toast } from 'react-toastify';
 import { FaUser } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import { Link } from 'react-router-dom';
+import useSetTitle from '../../hooks/useSetTitle';
 
 const Profile = () => {
   const { user, updateUserProfile } = useContext(AuthContext);
   const [name, setName] = useState(user?.displayName);
   const [email, setEmail] = useState(user?.email);
   const [photoURL, setPhotoURL] = useState(user?.photoURL);
+
+  useSetTitle('Profile');
 
   // const emailRef = useRef(user?.email);
 

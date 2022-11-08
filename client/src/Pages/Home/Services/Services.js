@@ -6,9 +6,12 @@ import Col from 'react-bootstrap/Col';
 import ServiceSummaryCard from './ServiceSummaryCard/ServiceSummaryCard';
 import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
+import useSetTitle from '../../../hooks/useSetTitle';
 
 const Services = () => {
   const [services, setServices] = useState([]);
+
+  useSetTitle('Services');
 
   useEffect(() => {
     fetch('http://localhost:5000/few-service')

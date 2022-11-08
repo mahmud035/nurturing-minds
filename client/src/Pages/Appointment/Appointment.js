@@ -5,12 +5,14 @@ import Form from 'react-bootstrap/Form';
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
+import useSetTitle from '../../hooks/useSetTitle';
 
 const Appointment = () => {
   const { user } = useContext(AuthContext);
   const [name, setName] = useState(user?.displayName);
   const [email, setEmail] = useState(user?.email);
   const navigate = useNavigate();
+  useSetTitle('Appointment');
 
   // st emailRef = useRef(user?.email);
 

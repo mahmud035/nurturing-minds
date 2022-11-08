@@ -1,12 +1,14 @@
 import React, { useEffect } from 'react';
 import { Button } from 'react-bootstrap';
 import { Link, useLoaderData } from 'react-router-dom';
+import useSetTitle from '../../../../hooks/useSetTitle';
 import './ServiceDetails.css';
 
 const ServiceDetails = () => {
   const service = useLoaderData() || {};
   const { _id, serviceName, price, imageURL, description } = service;
   console.log(service);
+  useSetTitle('Service Details');
 
   useEffect(() => {
     window.scrollTo(0, 0);

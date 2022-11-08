@@ -6,8 +6,11 @@ import About from '../About/About';
 import Gallery from '../Gallery/Gallery';
 import CoursePackages from '../CoursePackages/CoursePackages';
 import Appointment from '../../Appointment/Appointment';
+import useSetTitle from '../../../hooks/useSetTitle';
 
 const Home = () => {
+  useSetTitle('Home');
+
   return (
     <div>
       <Banner></Banner>

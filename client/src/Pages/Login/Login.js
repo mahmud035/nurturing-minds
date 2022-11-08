@@ -5,10 +5,12 @@ import Form from 'react-bootstrap/Form';
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 import { toast } from 'react-toastify';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import useSetTitle from '../../hooks/useSetTitle';
 
 const Login = () => {
   const { logIn, passwordReset } = useContext(AuthContext);
   const [userEmail, setUserEmail] = useState('');
+  useSetTitle('Login');
 
   useEffect(() => {
     window.scrollTo(0, 0);
