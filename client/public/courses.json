@@ -1,0 +1,46 @@
+[
+  {
+    "price": "$89",
+    "service_name": "Artificial Intelligence",
+    "image_url": "https://images.pexels.com/photos/8438918/pexels-photo-8438918.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "rating": {
+      "rate": 4.9,
+      "count": 35970
+    },
+    "description": "Learn key AI concepts and intuition training to get you quickly up to speed with all things AI. Learn to code self-improving AI for a range of purposes. In fact, we code together with you. Every tutorial starts with a blank page and we write up the code from scratch. This way you can follow along and understand exactly how the code comes together and what each line means. Plus, you'll get downloadable Python code templates for every AI you build in the course. This makes building truly unique AI as simple as changing a few lines of code. If you unleash your imagination, the potential is unlimited. You'll achieve your goal in not only 1 game but in 3. Each module is comprised of varying structures and difficulties, meaning you'll be skilled enough to build AI adaptable to any environment in real life, rather than just passing a glorified memory “test and forget” like most other courses. Practice truly does make perfect.\r\n"
+  },
+  {
+    "price": "$78",
+    "service_name": "Machine Learning",
+    "image_url": "https://images.pexels.com/photos/529598/pexels-photo-529598.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "rating": {
+      "rate": 4.8,
+      "count": 7610
+    },
+    "description": "This is a top selling Machine Learning and Data Science course just updated this month with the latest trends and skills for 2022! Become a complete Data Scientist and Machine Learning engineer! Join a live online community of 600,000+ engineers and a course taught by industry experts that have actually worked for large companies in places like Silicon Valley and Toronto. Graduates of Andrei’s courses are now working at Google, Tesla, Amazon, Apple, IBM, JP Morgan, Facebook, + other top tech companies. You will go from zero to mastery!. Learn Data Science and Machine Learning from scratch, get hired, and have fun along the way with the most modern, up-to-date Data Science course on Udemy (we use the latest version of Python, Tensorflow 2.0 and other libraries). This course is focused on efficiency: never spend time on confusing, out of date, incomplete Machine Learning tutorials anymore. We are pretty confident that this is the most comprehensive and modern course you will find on the subject anywhere (bold statement, we know).\r\n"
+  },
+  {
+    "price": "$20",
+    "service_name": "Computer Networking & Security",
+    "image_url": "https://images.unsplash.com/photo-1551703599-6b3e8379aa8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80",
+    "description": "Welcome to the Complete Network Fundamentals Course! In this course, you will learn the technologies that keep the world as you know today connected and running. We cover both the fundamentals of networking as well as the topics in the new Cisco CCNA 200-301 exam.Networks are all around us and you are using one right now to access this course.Imagine for a moment, how different your life would be without access to Facebook, Snapchat, Google, YouTube, Whatsapp or any of the other websites on the Internet? How would you live with no Internet? The Internet is extremely important in modern life today and all websites and Internet communication relies on networking. This reliance is only predicted to continue with the growth of the Internet of Things (IoT) in the next few years. Without routers, switches, network cabling and protocols like BGP there would be no Internet! This course will teach you how networks actually work and how you are able to connect to websites like Facebook, Google, and YouTube.Companies throughout the world (from the smallest to the largest) rely on networks designed, installed and maintained by networking engineers. Join this in demand industry! Companies throughout the world (from the smallest to the largest) rely on networks designed, installed and maintained by networking engineers. Join this in demand industry! Start your journey today learning about networking.\r\n"
+  },
+  {
+    "price": "$50",
+    "service_name": "Data Structure",
+    "image_url": "https://msatechnosoft.in/blog/wp-content/uploads/2018/09/Data-Structure-tutorial-MSA-Technosoft.jpg",
+    "description": "Welcome to the Complete Data Structures in Python Bootcamp, the most modern, and the most complete Data Structures and Algorithms in Python course on the internet. At 40+ hours, this is the most comprehensive course online to help you ace your coding interviews and learn about Data Structures and Algorithms in Python. You will see 100+ Interview Questions done at the top technology companies such as Apple,Amazon, Google and Microsoft and how to face Interviews with comprehensive visual explanatory video materials which will bring you closer towards landing the tech job of your dreams! Learning Python is one of the fastest ways to improve your career prospects as it is one of the most in demand tech skills! This course will help you in better understanding every detail of Data Structures and how algorithms are implemented in high level programming language. We'll take you step-by-step through engaging video tutorials and teach you everything you need to succeed as a professional programmer. Learn basic algorithmic techniques such as greedy algorithms, binary search, sorting and dynamic programming to solve programming challenges. Learn the strengths and weaknesses of a variety of data structures, so you can choose the best data structure for your data and applications. Learn many of the algorithms commonly used to sort data, so your applications will perform efficiently when sorting large datasets \r\n"
+  },
+  {
+    "price": "$119",
+    "service_name": "Algorithms Design & Analysis",
+    "image_url": "https://images.unsplash.com/photo-1642428899339-db778a4af19a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "description": "This course crams months of computer science and interview prep material into 20 hours of video. The content is based directly on last semester of my in-person coding bootcamps, where my students go on to land 6-figure developer jobs. I cover the exact same computer science content that has helped my students ace interviews at huge companies like Google, Tesla, Amazon, and Facebook. Nothing is watered down for an online audience; this is the real deal :)   We start with the basics and then eventually cover “advanced topics” that similar courses shy away from like Heaps, Graphs, and Dijkstra’s Shortest Path Algorithm. I start by teaching you how to analyze your code’s time and space complexity using Big O notation.  We cover the ins and outs of Recursion.  We learn a 5-step approach to solving any difficult coding problem. We cover common programming patterns. We implement popular searching algorithms. We write 6 different sorting algorithms: Bubble, Selection, Insertion, Quick, Merge, and Radix Sort.   Then, we switch gears and implement our own data structures from scratch, including linked lists, trees, heaps, hash tables, and graphs.  We learn to traverse trees and graphs, and cover Dijkstra's Shortest Path Algorithm.  The course also includes an entire section devoted to Dynamic Programming. \r\n"
+  },
+  {
+    "price": "$70",
+    "service_name": "Database Management System",
+    "image_url": "https://images.pexels.com/photos/4508751/pexels-photo-4508751.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "description": "Welcome to the course Database Management system from scratch !!! Mastering the concepts of Database Management System is very important to get started with Computer Science because Database Management System is the program which is responsible for the ease with which we are able to fetch the data from the database and that is the backbone of internet today. The concepts which we are going to study is going to give a very good understanding of Database Management System and by the end of it you will be able to answer any interview question on Database Management System. Without using Database Management Systems ,it is extremely difficult to communicate with the data in the server. Every server today has Database Management System installed in it. Through this course you will not only master the basics of Database Management Systems but also get ready for venturing into advanced concepts of Database Management Systems. In this course ,every concept of Database Management System is taught in an easy-to-understand manner such that anybody without any prerequisites will be able to master the concepts of Database Management System in the easiest way. Come and join me, I assure you that you will have the best learning experience of not just Database Management Systems but also the core of Computer Science in a different dimension.\r\n"
+  }
+]
