@@ -5,7 +5,7 @@ import Services from '../Services/Services';
 import About from '../About/About';
 import Gallery from '../Gallery/Gallery';
 import CoursePackages from '../CoursePackages/CoursePackages';
-import Appointment from '../Appointment/Appointment';
+import Appointment from '../../Appointment/Appointment';
 
 const Home = () => {
   return (

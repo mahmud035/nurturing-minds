@@ -2,6 +2,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import Main from '../../Layout/Main';
 import Profile from '../../Others/Profile/Profile';
 import AddService from '../../Pages/AddService/AddService';
+import Appointment from '../../Pages/Appointment/Appointment';
 import Blog from '../../Pages/Blog/Blog';
 import ErrorPage from '../../Pages/ErrorPage/ErrorPage';
 import Home from '../../Pages/Home/Home/Home';
@@ -64,6 +65,11 @@ const router = createBrowserRouter([
             <Profile></Profile>
           </PrivateRoutes>
         ),
+      },
+
+      {
+        path: '/book-session',
+        element: <Appointment></Appointment>,
       },
     ],
   },
