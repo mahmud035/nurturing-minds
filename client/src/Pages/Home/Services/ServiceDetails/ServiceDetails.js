@@ -7,8 +7,8 @@ import './ServiceDetails.css';
 const ServiceDetails = () => {
   const service = useLoaderData() || {};
   const { _id, serviceName, price, imageURL, description } = service;
-  console.log(service);
   useSetTitle('Service Details');
+  // console.log(service);
 
   useEffect(() => {
     window.scrollTo(0, 0);
