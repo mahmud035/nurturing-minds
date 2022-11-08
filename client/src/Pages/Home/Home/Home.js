@@ -7,6 +7,7 @@ import Gallery from '../Gallery/Gallery';
 import CoursePackages from '../CoursePackages/CoursePackages';
 import Appointment from '../../Appointment/Appointment';
 import useSetTitle from '../../../hooks/useSetTitle';
+import Contact from '../Contact/Contact';
 
 const Home = () => {
   useSetTitle('Home');
@@ -19,6 +20,7 @@ const Home = () => {
       <CoursePackages></CoursePackages>
       <Gallery></Gallery>
       <Appointment></Appointment>
+      <Contact></Contact>
     </div>
   );
 };
