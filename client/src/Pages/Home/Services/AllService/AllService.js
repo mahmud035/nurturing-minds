@@ -6,6 +6,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import ServiceSummaryCard from '../ServiceSummaryCard/ServiceSummaryCard';
 import useSetTitle from '../../../../hooks/useSetTitle';
+import { CirclesWithBar } from 'react-loader-spinner';
 
 const AllService = () => {
   const services = useLoaderData() || [];
@@ -14,6 +15,20 @@ const AllService = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  if (services.length === 0) {
+    return (
+      <CirclesWithBar
+        height="60"
+        width="60"
+        color="#38D4C6"
+        wrapperStyle={{}}
+        wrapperClass="d-flex justify-content-center align-items-center  min-vh-100"
+        visible={true}
+        ariaLabel="circles-with-bar-loading"
+      />
+    );
+  }
 
   // console.log(services);
   return (

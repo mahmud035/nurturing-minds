@@ -15,7 +15,7 @@ const PrivateRoutes = ({ children }) => {
         width="60"
         color="#38D4C6"
         wrapperStyle={{}}
-        wrapperClass="d-flex justify-content-center align-items-center mt-5 min-vh-100"
+        wrapperClass="d-flex justify-content-center align-items-center  min-vh-100"
         visible={true}
         ariaLabel="circles-with-bar-loading"
       />

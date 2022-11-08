@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import useSetTitle from '../../hooks/useSetTitle';
 import './AddService.css';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 
 const AddService = () => {
+  const navigate = useNavigate();
   useSetTitle('Add Service');
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   // st emailRef = useRef(user?.email);
 
@@ -32,6 +38,7 @@ const AddService = () => {
         console.log(data);
         if (data.acknowledged) {
           toast.success('Service Added Successfully');
+          navigate('/services');
         }
       })
       .catch((error) => {
@@ -41,7 +48,6 @@ const AddService = () => {
 
   return (
     <div>
-      <h1>Add Service</h1>
       <div className="profile-page py-5">
         <div className="min-vh-100 container pb-5">
           <div>
