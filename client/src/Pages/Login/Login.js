@@ -6,6 +6,7 @@ import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 import { toast } from 'react-toastify';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useSetTitle from '../../hooks/useSetTitle';
+import { CirclesWithBar } from 'react-loader-spinner';
 
 const Login = () => {
   const { logIn, passwordReset } = useContext(AuthContext);

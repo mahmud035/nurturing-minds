@@ -53,7 +53,9 @@ const AddService = () => {
           <div>
             <div className="profile-page-form-container">
               <div>
-                <h4 className="py-4 text-center fs-2">Add a New Service</h4>
+                <h4 className="py-4 text-center fs-2">
+                  Add a New <span>Service</span>
+                </h4>
                 <p className="text-center w-75 mx-auto">
                   On the other hand, we denounce with righteous indignation and
                   dislike men who are so beguiled and demoralized
