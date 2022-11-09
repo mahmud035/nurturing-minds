@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Button } from 'react-bootstrap';
 import { Link, useLoaderData } from 'react-router-dom';
+import { AuthContext } from '../../../../context/AuthProvider/AuthProvider';
 import useSetTitle from '../../../../hooks/useSetTitle';
 import AddReview from './AddReview/AddReview';
 import DisplayReviews from './DisplayReviews/DisplayReviews';
@@ -8,13 +9,14 @@ import './ServiceDetails.css';
 
 const ServiceDetails = () => {
   const service = useLoaderData() || {};
-  const { _id, serviceName, price, imageURL, description } = service;
+  const { user } = useContext(AuthContext);
+  const { serviceName, price, imageURL, description } = service;
   useSetTitle('Service Details');
   // console.log(service);
 
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div>
@@ -39,7 +41,17 @@ const ServiceDetails = () => {
       {/* Review Section */}
       <div>
         <DisplayReviews service={service}></DisplayReviews>
-        <AddReview service={service}></AddReview>
+        {user?.email && user?.uid ? (
+          <>
+            <AddReview service={service}></AddReview>
+          </>
+        ) : (
+          <>
+            <h5 className="text-center pb-4">
+              Please <Link to="/login">Login</Link> to add a review.
+            </h5>
+          </>
+        )}
       </div>
     </div>
   );

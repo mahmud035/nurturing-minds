@@ -1,11 +1,11 @@
 import React from 'react';
-import './ReviewCard.css';
+import './MyReviewCard.css';
 import Card from 'react-bootstrap/Card';
 import { Image } from 'react-bootstrap';
 import { FaUser } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 
-const ReviewCard = ({ review }) => {
+const MyReviewCard = ({ review }) => {
   const { userName, userEmail, serviceName, photoURL, description } = review;
   // console.log(review);
 
@@ -36,4 +36,4 @@ const ReviewCard = ({ review }) => {
   );
 };
 
-export default ReviewCard;
+export default MyReviewCard;

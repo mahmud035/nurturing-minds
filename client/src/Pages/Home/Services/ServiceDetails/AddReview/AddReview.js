@@ -18,6 +18,10 @@ const AddReview = ({ service }) => {
     const photoURL = user?.photoURL;
     const userEmail = user?.email;
 
+    if (description.length < 30) {
+      return toast.info('Please type at least 30 characters');
+    }
+
     const review = {
       serviceName: serviceName,
       serviceId: _id,
