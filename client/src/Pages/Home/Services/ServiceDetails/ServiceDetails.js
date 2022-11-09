@@ -3,6 +3,7 @@ import { Button } from 'react-bootstrap';
 import { Link, useLoaderData } from 'react-router-dom';
 import useSetTitle from '../../../../hooks/useSetTitle';
 import AddReview from './AddReview/AddReview';
+import DisplayReviews from './DisplayReviews/DisplayReviews';
 import './ServiceDetails.css';
 
 const ServiceDetails = () => {
@@ -37,6 +38,7 @@ const ServiceDetails = () => {
 
       {/* Review Section */}
       <div>
+        <DisplayReviews service={service}></DisplayReviews>
         <AddReview service={service}></AddReview>
       </div>
     </div>

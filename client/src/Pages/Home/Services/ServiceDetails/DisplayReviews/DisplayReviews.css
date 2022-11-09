@@ -1,0 +1,20 @@
+.review-card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 350px);
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+@media (max-width: 999px) {
+  .review-card-container {
+    grid-template-columns: repeat(1, 350px);
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .review-card-container {
+    grid-template-columns: repeat(2, 350px);
+    justify-content: center;
+  }
+}
