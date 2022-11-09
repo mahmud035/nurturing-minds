@@ -2,6 +2,7 @@ import React from 'react';
 import './Blog.css';
 import Accordion from 'react-bootstrap/Accordion';
 import useSetTitle from '../../hooks/useSetTitle';
+import Table from 'react-bootstrap/Table';
 
 const Blog = () => {
   useSetTitle('Blog');
@@ -13,25 +14,52 @@ const Blog = () => {
           <Accordion.Header>Difference between SQL and NoSQL</Accordion.Header>
 
           <Accordion.Body>
-            <strong>Cross-Origin Resource Sharing (CORS) </strong> is an
-            HTTP-header based mechanism that allows a server to indicate any
-            origins (domain, scheme, or port) other than its own from which a
-            browser should permit loading resources. CORS also relies on a
-            mechanism by which browsers make a "preflight" request to the server
-            hosting the cross-origin resource, in order to check that the server
-            will permit the actual request. In that preflight, the browser sends
-            headers that indicate the HTTP method and headers that will be used
-            in the actual request.
-            <br /> <br />
-            An example of a cross-origin request: the front-end JavaScript code
-            served from https://domain-a.com uses XMLHttpRequest to make a
-            request for https://domain-b.com/data.json. <br /> <br />
-            For security reasons, browsers restrict cross-origin HTTP requests
-            initiated from scripts. For example, XMLHttpRequest and the Fetch
-            API follow the same-origin policy. This means that a web application
-            using those APIs can only request resources from the same origin the
-            application was loaded from unless the response from other origins
-            includes the right CORS headers.
+            <Table striped bordered hover variant="dark">
+              <thead>
+                <tr>
+                  <th>SQL</th>
+                  <th>NoSQL</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>RELATIONAL DATABASE MANAGEMENT SYSTEM (RDBMS)</td>
+                  <td>Non-relational or distributed database system.</td>
+                </tr>
+                <tr>
+                  <td>
+                    These databases have fixed or static or predefined schema
+                  </td>
+                  <td>They have dynamic schema</td>
+                </tr>
+                <tr>
+                  <td>
+                    These databases are not suited for hierarchical data
+                    storage.
+                  </td>
+                  <td>
+                    These databases are best suited for hierarchical data
+                    storage.
+                  </td>
+                </tr>
+                <tr>
+                  <td>These databases are best suited for complex queries</td>
+                  <td>These databases are not so good for complex queries</td>
+                </tr>
+                <tr>
+                  <td>Vertically Scalable</td>
+                  <td>Horizontally scalable</td>
+                </tr>
+                <tr>
+                  <td>
+                    Examples: MySQL, PostgreSQL, Oracle, MS-SQL Server etc
+                  </td>
+                  <td>
+                    Examples: MongoDB, GraphQL, HBase, Neo4j, Cassandra etc
+                  </td>
+                </tr>
+              </tbody>
+            </Table>
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="1">
@@ -39,12 +67,37 @@ const Blog = () => {
             What is JWT, and how does it work?
           </Accordion.Header>
           <Accordion.Body>
-            Firebase helps us to develop high-quality apps, grow our user base,
-            and earn more money. Each feature works independently, and they work
-            even better together. <br /> <br />
-            <h5>What other options do you have to implement authentication?</h5>
-            Auth0, MongoDB, Passport, Okta are the most popular alternatives and
-            competitors to Firebase Authentication.
+            JSON Web Token (JWT) is an open standard (RFC 7519) that defines a
+            compact and self-contained way for securely transmitting information
+            between parties as a JSON object. This information can be verified
+            and trusted because it is digitally signed.
+            <h5 className="py-3">How do JSON Web Tokens work?</h5>
+            In authentication, when the user successfully logs in using their
+            credentials, a JSON Web Token will be returned. Since tokens are
+            credentials, great care must be taken to prevent security issues. In
+            general, you should not keep tokens longer than required. <br />
+            <br />
+            You also should not store sensitive session data in browser storage
+            due to lack of security. <br /> <br />
+            Whenever the user wants to access a protected route or resource, the
+            user agent should send the JWT, typically in the Authorization
+            header using the Bearer schema. The content of the header should
+            look like the following: <br /> <br />
+            <strong>Authorization: Bearer token</strong> <br /> <br />
+            This can be, in certain cases, a stateless authorization mechanism.
+            The server's protected routes will check for a valid JWT in the
+            Authorization header, and if it's present, the user will be allowed
+            to access protected resources. If the JWT contains the necessary
+            data, the need to query the database for certain operations may be
+            reduced, though this may not always be the case. <br /> <br />
+            Note that if you send JWT tokens through HTTP headers, you should
+            try to prevent them from getting too big. Some servers don't accept
+            more than 8 KB in headers. If you are trying to embed too much
+            information in a JWT token, like by including all the user's
+            permissions, you may need an alternative solution, like Auth0
+            Fine-Grained Authorization. If the token is sent in the
+            Authorization header, Cross-Origin Resource Sharing (CORS) won't be
+            an issue as it doesn't use cookies.
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="2">
@@ -52,26 +105,60 @@ const Blog = () => {
             What is the difference between javascript and NodeJS?
           </Accordion.Header>
           <Accordion.Body>
-            When developing a React Application with Authentication, we might
-            require public and private routes. <br />
-            <br />
-            <h4>Public Routes</h4>
-            Public routes are Log in, SignUp, Forgot Password, Reset Password.
-            In simple words, These routes can be accessed before login into the
-            <br /> <br />
-            <h4>Private Routes</h4>
-            Private Routes vary based on the Apps, For example, Dashboard, User
-            Profile, App Settings, Home etc. In simple words, These routes can
-            be accessed only after login. The constraints for Public and Private
-            routes are that Public routes should not be accessed after login and
-            Private routes should not be accessible before login. <br /> <br />
-            The private route component is similar to the public route, the only
-            change is that redirect URL and authenticate condition. If the user
-            is not authenticated he will be redirected to the login page and the
-            user can only access the authenticated routes If he is authenticated
-            (Logged in). Public and Private routes will also restrict accessing
-            the previously visited routes using the browser back button after
-            logout.
+            <Table striped bordered hover variant="dark">
+              <thead>
+                <tr>
+                  <th>Javascript</th>
+                  <th> NodeJS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    Javascript is a programming language that is used for
+                    writing scripts on the website.{' '}
+                  </td>
+                  <td>NodeJS is a Javascript runtime environment.</td>
+                </tr>
+                <tr>
+                  <td>Javascript can only be run in the browsers.</td>
+                  <td>
+                    We can run Javascript outside the browser with the help of
+                    NodeJS.
+                  </td>
+                </tr>
+                <tr>
+                  <td>It is basically used on the client-side.</td>
+                  <td>It is mostly used on the server-side.</td>
+                </tr>
+                <tr>
+                  <td>
+                    Javascript is capable enough to add HTML and play with the
+                    DOM.
+                  </td>
+                  <td>Nodejs does not have capability to add HTML tags.</td>
+                </tr>
+                <tr>
+                  <td>
+                    Javascript can run in any browser engine as like JS core in
+                    safari and Spidermonkey in Firefox.
+                  </td>
+                  <td>
+                    V8 is the Javascript engine inside of node.js that parses
+                    and runs Javascript.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Some of the javascript frameworks are RamdaJS, TypedJS, etc.
+                  </td>
+                  <td>
+                    Some of the Nodejs modules are Lodash, express etc. These
+                    modules are to be imported from npm.
+                  </td>
+                </tr>
+              </tbody>
+            </Table>
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="3">
@@ -79,50 +166,24 @@ const Blog = () => {
             How does NodeJS handle multiple requests at the same time?
           </Accordion.Header>
           <Accordion.Body>
-            Node.js is an open-source backend javascript runtime environment. It
-            is a used as backend service where javascript works on the
-            server-side of the application. This way javascript is used on both
-            frontend and backend. Node.js runs on chrome v8 engine which
-            converts javascript code into machine code, it is highly scalable,
-            lightweight, fast, and data-intensive.
-            <br />
-            <br />
-            <strong>Working of Node.js:</strong>
-            Node.js accepts the request from the clients and sends the response,
-            while working with the request node.js handles them with a single
-            thread. To operate I/O operations or requests node.js use the
-            concept of threads. Thread is a sequence of instructions that the
-            server needs to perform. It runs parallel on the server to provide
-            the information to multiple clients. Node.js is an event loop
-            single-threaded language. It can handle concurrent requests with a
-            single thread without blocking it for one request.
+            NodeJS receives multiple client requests and places them into
+            EventQueue. NodeJS is built with the concept of event-driven
+            architecture. NodeJS has its own EventLoop which is an infinite loop
+            that receives requests and processes them. EventLoop is the listener
+            for the EventQueue. If NodeJS can process the request without I/O
+            blocking then the event loop would itself process the request and
+            sends the response back to the client by itself. But, it is possible
+            to process multiple requests parallelly using the NodeJS cluster
+            module or worker_threads module. <br /> <br />A single instance of
+            Node.js runs in a single thread. If you have a multi-core system
+            then you can utilize every core. Sometimes developer wants to launch
+            a cluster of NodeJS process to take advantage of the multi-core
+            system. The cluster module allows easy creation of child processes
+            that all share the same server ports.
             <br /> <br />
-            <strong>Node.js basically works on two concept</strong>
-            <li>Asynchronous</li>
-            <li>Non-blocking I/O</li>
-            <strong>Non-blocking I/o:</strong> Non-blocking i/o means working
-            with multiple requests without blocking the thread for a single
-            request. I/O basically interacts with external systems such as
-            files, databases. Node.js is not used for CPU-intensive work means
-            for calculations, video processing because a single thread cannot
-            handle the CPU works.
-            <br /> <br />
-            <strong> Asynchronous: </strong> Asynchronous is executing a
-            callback function. The moment we get the response from the other
-            server or database it will execute a callback function. Callback
-            functions are called as soon as some work is finished and this is
-            because the node.js uses an event-driven architecture. The single
-            thread doesn't work with the request instead it sends the request to
-            another system which resolves the request and it is accessible for
-            another request.
-            <figure>
-              <img
-                className="mt-4 img-fluid"
-                src="https://media.geeksforgeeks.org/wp-content/uploads/20210916203407/WorkingofNodejs1.png"
-                alt=""
-              />
-              <figcaption>Fig: Working of Node.js.</figcaption>
-            </figure>
+            Using worker_threads Module: The best solution for CPU performance
+            is Worker Thread. This module is used in Node.js because it is
+            useful for performing heavy JavaScript tasks.
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>
