@@ -62,7 +62,9 @@ const router = createBrowserRouter([
           </PrivateRoutes>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/edit-review/${params.id}`),
+          fetch(
+            `https://nurturing-minds-server-side.vercel.app/edit-review/${params.id}`
+          ),
       },
 
       {
