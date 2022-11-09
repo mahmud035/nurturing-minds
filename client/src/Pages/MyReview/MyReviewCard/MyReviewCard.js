@@ -4,9 +4,11 @@ import Card from 'react-bootstrap/Card';
 import { Image } from 'react-bootstrap';
 import { FaUser } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
+import Button from 'react-bootstrap/Button';
 
-const MyReviewCard = ({ review }) => {
-  const { userName, userEmail, serviceName, photoURL, description } = review;
+const MyReviewCard = ({ review, handleDeleteReview }) => {
+  const { _id, userName, userEmail, serviceName, photoURL, description } =
+    review;
   // console.log(review);
 
   return (
@@ -30,6 +32,13 @@ const MyReviewCard = ({ review }) => {
         <Card.Body>
           <Card.Title>{serviceName}</Card.Title>
           <Card.Text>{description}</Card.Text>
+
+          <div className="d-flex gap-3">
+            <Button variant="info">Edit Review</Button>
+            <Button onClick={() => handleDeleteReview(_id)} variant="danger">
+              Delete Review
+            </Button>
+          </div>
         </Card.Body>
       </Card>
     </div>
