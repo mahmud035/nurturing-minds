@@ -2,7 +2,7 @@
 
 #### Project Name: Nurturing Minds
 
-#### Live Website: <a href="https://brain-stormy-client.web.app/">BrainStormy</a>
+#### Live Website: <a href="https://nurturing-minds-client-side.web.app/">Nurturing Minds</a>
 
 ### Description
 
@@ -11,7 +11,7 @@ The main purpose of Nurturing Minds is to provide mental health services to thos
 ### Features and Functionality
 
 <ul>
-<li>A user can get various kinds of services.</li>
+<li>A user can get various kinds of psychological services.</li>
 <li> User can make an appointment / book a one-to-one session. </li>
 <li> They can give their valuable feedback based on their experience.</li> 
 <li> Users can sign up with their email, password, Google account, or Github account.</li>
@@ -44,4 +44,4 @@ The main purpose of Nurturing Minds is to provide mental health services to thos
 
 ### What I learned
 
-While doing this project gave me a fresh overview of basic react, react-router, react-toasty, Firebase Authentication, Node, Express js, MongoDB and much more. <strong> Specially Mongodb CRUD operation</strong> Now I have enough understanding about these topics and I am confident about it.
+While doing this project gave me a fresh overview of basic react, react-router, react-toasty, Firebase Authentication, Node, Express js, MongoDB and much more. <strong> Specially Mongodb CRUD operation</strong>. Now I have enough understanding about these topics and I am confident about it.
