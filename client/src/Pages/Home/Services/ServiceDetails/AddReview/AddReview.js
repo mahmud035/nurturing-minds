@@ -3,6 +3,7 @@ import './AddReview.css';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { AuthContext } from '../../../../../context/AuthProvider/AuthProvider';
+import { toast } from 'react-toastify';
 
 const AddReview = ({ service }) => {
   const { user } = useContext(AuthContext);
@@ -27,6 +28,25 @@ const AddReview = ({ service }) => {
     };
 
     console.log(review);
+
+    fetch('http://localhost:5000/review', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify(review),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        // console.log(data);
+        if (data.acknowledged) {
+          toast.success('Review added Successfully');
+          form.reset();
+        }
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
   };
 
   return (
