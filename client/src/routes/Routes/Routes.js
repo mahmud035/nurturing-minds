@@ -30,13 +30,16 @@ const router = createBrowserRouter([
       {
         path: '/services',
         element: <AllService></AllService>,
-        loader: () => fetch('http://localhost:5000/services'),
+        loader: () =>
+          fetch('https://nurturing-minds-server-side.vercel.app/services'),
       },
       {
         path: '/services/:id',
         element: <ServiceDetails></ServiceDetails>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/services/${params.id}`),
+          fetch(
+            `https://nurturing-minds-server-side.vercel.app/services/${params.id}`
+          ),
       },
       {
         path: '/blog',

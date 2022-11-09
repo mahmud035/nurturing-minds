@@ -28,7 +28,7 @@ const AddService = () => {
 
     const service = { serviceName, price, imageURL, description };
 
-    fetch('http://localhost:5000/service', {
+    fetch('https://nurturing-minds-server-side.vercel.app/service', {
       method: 'POST',
       headers: { 'content-Type': 'application/json' },
       body: JSON.stringify(service),

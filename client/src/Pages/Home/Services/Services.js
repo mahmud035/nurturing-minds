@@ -14,7 +14,7 @@ const Services = () => {
   useSetTitle('Services');
 
   useEffect(() => {
-    fetch('http://localhost:5000/few-service')
+    fetch('https://nurturing-minds-server-side.vercel.app/few-service')
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);

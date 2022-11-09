@@ -5,7 +5,7 @@ export const setAuthToken = (user) => {
   // console.log(currentUser);
 
   //! get JWT Token
-  fetch('http://localhost:5000/jwt', {
+  fetch('https://nurturing-minds-server-side.vercel.app/jwt', {
     method: 'POST',
     headers: {
       'content-type': 'application/json',

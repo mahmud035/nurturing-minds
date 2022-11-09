@@ -33,7 +33,7 @@ const AddReview = ({ service }) => {
 
     console.log(review);
 
-    fetch('http://localhost:5000/review', {
+    fetch('https://nurturing-minds-server-side.vercel.app/review', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',

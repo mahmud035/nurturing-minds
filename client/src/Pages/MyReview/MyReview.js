@@ -17,11 +17,14 @@ const MyReview = () => {
   }, []);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/reviews?email=${user?.email}`, {
-      headers: {
-        authorization: `Bearer ${localStorage.getItem('nurturing-token')}`,
-      },
-    })
+    fetch(
+      `https://nurturing-minds-server-side.vercel.app/reviews?email=${user?.email}`,
+      {
+        headers: {
+          authorization: `Bearer ${localStorage.getItem('nurturing-token')}`,
+        },
+      }
+    )
       .then((res) => {
         if (res.status === 401 || res.status === 403) {
           logOut()
@@ -49,7 +52,7 @@ const MyReview = () => {
     const agree = window.confirm('Are you sure you want to delete the review?');
 
     if (agree) {
-      fetch(`http://localhost:5000/reviews/${_id}`, {
+      fetch(`https://nurturing-minds-server-side.vercel.app/reviews/${_id}`, {
         method: 'DELETE',
       })
         .then((res) => res.json())
