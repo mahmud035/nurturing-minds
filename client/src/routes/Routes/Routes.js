@@ -55,7 +55,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: '/edit-review/:id',
+        path: '/edit/:id',
         element: (
           <PrivateRoutes>
             <EditReview></EditReview>
@@ -63,7 +63,7 @@ const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(
-            `https://nurturing-minds-server-side.vercel.app/edit-review/${params.id}`
+            `https://nurturing-minds-server-side.vercel.app/edit/${params.id}`
           ),
       },
 

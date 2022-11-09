@@ -35,7 +35,7 @@ const MyReviewCard = ({ review, handleDeleteReview }) => {
           <Card.Text>{description}</Card.Text>
 
           <div className="d-flex gap-3">
-            <Link to={`/edit-review/${_id}`}>
+            <Link to={`/edit/${_id}`}>
               <Button variant="info">Edit Review</Button>
             </Link>
             <Button onClick={() => handleDeleteReview(_id)} variant="danger">
