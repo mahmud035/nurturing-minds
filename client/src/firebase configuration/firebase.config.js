@@ -5,12 +5,12 @@ import { initializeApp } from 'firebase/app';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: 'AIzaSyAKie0KpvdCdZ7iQNoHrZYENd1wGxhyGek',
-  authDomain: 'nurturing-minds-client-side.firebaseapp.com',
-  projectId: 'nurturing-minds-client-side',
-  storageBucket: 'nurturing-minds-client-side.appspot.com',
-  messagingSenderId: '983733216475',
-  appId: '1:983733216475:web:fb2498933a2f87a9be98fe',
+  apiKey: process.env.REACT_APP_apiKey,
+  authDomain: process.env.REACT_APP_authDomain,
+  projectId: process.env.REACT_APP_projectId,
+  storageBucket: process.env.REACT_APP_storageBucket,
+  messagingSenderId: process.env.REACT_APP_messagingSenderId,
+  appId: process.env.REACT_APP_appId,
 };
 
 // Initialize Firebase

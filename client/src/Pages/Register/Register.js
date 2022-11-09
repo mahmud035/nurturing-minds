@@ -9,6 +9,7 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import { FcGoogle } from 'react-icons/fc';
 import { BsGithub } from 'react-icons/bs';
 import useSetTitle from '../../hooks/useSetTitle';
+import { setAuthToken } from '../../auth token/setAuthToken';
 
 const Register = () => {
   const { createUser, googleSignIn, githubSignIn, updateUserProfile } =
@@ -41,6 +42,9 @@ const Register = () => {
         console.log(user);
         toast.success('Account Created Successfully');
 
+        //* JWT Token
+        setAuthToken(user);
+
         navigate('/');
         handleUpdateUserProfile(name, photoURL);
       })
@@ -57,6 +61,9 @@ const Register = () => {
         console.log(user);
         toast.success('Account Created Successfully');
 
+        //* JWT Token
+        setAuthToken(user);
+
         navigate('/');
       })
       .catch((error) => {
@@ -71,6 +78,9 @@ const Register = () => {
         const user = result.user;
         console.log(user);
         toast.success('Account Created Successfully');
+
+        //* JWT Token
+        setAuthToken(user);
 
         navigate('/');
       })

@@ -12,13 +12,9 @@ import { FaUserCircle } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
-import { HiSun } from 'react-icons/hi';
-import { BiMoon } from 'react-icons/bi';
-import { useState } from 'react';
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
-  const [darkMode, setDarkMode] = useState(true);
 
   const handleLogOut = () => {
     logOut();
@@ -91,31 +87,6 @@ const Header = () => {
                     </>
                   )}
                   <NavLink to="/book-session">Appointment</NavLink>
-
-                  <div
-                    onClick={() => setDarkMode(!darkMode)}
-                    style={{ marginLeft: 'auto !important' }}
-                  >
-                    {darkMode ? (
-                      <>
-                        <HiSun
-                          className="text-white"
-                          size={32}
-                          style={{ cursor: 'pointer' }}
-                          title="Switch Light"
-                        />
-                      </>
-                    ) : (
-                      <>
-                        <BiMoon
-                          className="text-white"
-                          size={32}
-                          style={{ cursor: 'pointer' }}
-                          title="Switch Dark"
-                        />
-                      </>
-                    )}
-                  </div>
                 </Nav>
 
                 <Nav className="user-profile-and-logout mt-lg-0">

@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 import useSetTitle from '../../hooks/useSetTitle';
@@ -6,8 +7,9 @@ import './MyReview.css';
 import MyReviewCard from './MyReviewCard/MyReviewCard';
 
 const MyReview = () => {
-  const { user } = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
   const [myReviews, setMyReviews] = useState([]);
+  const navigate = useNavigate();
   useSetTitle('My Review');
 
   useEffect(() => {
@@ -15,16 +17,32 @@ const MyReview = () => {
   }, []);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/reviews?email=${user?.email}`)
-      .then((res) => res.json())
+    fetch(`http://localhost:5000/reviews?email=${user?.email}`, {
+      headers: {
+        authorization: `Bearer ${localStorage.getItem('nurturing-token')}`,
+      },
+    })
+      .then((res) => {
+        if (res.status === 401 || res.status === 403) {
+          logOut()
+            .then(() => {})
+            .catch((error) => {
+              toast.error(error.message.slice(22, -2));
+            });
+          navigate('/login');
+        }
+
+        return res.json();
+      })
       .then((data) => {
         console.log(data);
+        toast.error(data.message);
         setMyReviews(data);
       })
       .catch((error) => {
         console.log(error.message);
       });
-  }, [user?.email]);
+  }, [user?.email, logOut, navigate]);
 
   // Delete Singe Review
   const handleDeleteReview = (_id) => {

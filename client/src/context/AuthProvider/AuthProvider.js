@@ -57,6 +57,7 @@ const AuthProvider = ({ children }) => {
 
   //* Log Out
   const logOut = () => {
+    localStorage.removeItem('nurturing-token');
     return signOut(auth);
   };
 

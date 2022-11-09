@@ -6,7 +6,7 @@ import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 import { toast } from 'react-toastify';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useSetTitle from '../../hooks/useSetTitle';
-import { CirclesWithBar } from 'react-loader-spinner';
+import { setAuthToken } from '../../auth token/setAuthToken';
 
 const Login = () => {
   const { logIn, passwordReset } = useContext(AuthContext);
@@ -33,13 +33,15 @@ const Login = () => {
     logIn(email, password)
       .then((result) => {
         const user = result.user;
-        console.log(user);
-
+        // console.log(user);
         toast.success('Login Successfully');
+
+        //* JWT Token
+        setAuthToken(user);
+
         navigate(from, { replace: true });
       })
       .catch((error) => {
-        console.log(error);
         toast.error(error.message.slice(22, -2));
       });
   };
