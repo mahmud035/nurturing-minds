@@ -5,6 +5,7 @@ import { Image } from 'react-bootstrap';
 import { FaUser } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
 
 const MyReviewCard = ({ review, handleDeleteReview }) => {
   const { _id, userName, userEmail, serviceName, photoURL, description } =
@@ -34,7 +35,9 @@ const MyReviewCard = ({ review, handleDeleteReview }) => {
           <Card.Text>{description}</Card.Text>
 
           <div className="d-flex gap-3">
-            <Button variant="info">Edit Review</Button>
+            <Link to={`/edit-review/${_id}`}>
+              <Button variant="info">Edit Review</Button>
+            </Link>
             <Button onClick={() => handleDeleteReview(_id)} variant="danger">
               Delete Review
             </Button>

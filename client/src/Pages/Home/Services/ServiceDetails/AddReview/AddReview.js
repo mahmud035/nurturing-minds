@@ -54,51 +54,47 @@ const AddReview = ({ service }) => {
   };
 
   return (
-    <div>
-      <div>
-        <div className="profile-page py-5">
-          <div className="min-vh-100 container pb-5">
+    <div className="profile-page py-5">
+      <div className="min-vh-100 container pb-5">
+        <div>
+          <div className="profile-page-form-container">
             <div>
-              <div className="profile-page-form-container">
-                <div>
-                  <h4 className="py-4 text-center fs-2">
-                    Add a New <span className="text-info">Review</span>
-                  </h4>
-                  <p className="text-center w-75 mx-auto">
-                    On the other hand, we denounce with righteous indignation
-                    and dislike men who are so beguiled and demoralized
-                  </p>
-                </div>
-                <Form
-                  onSubmit={handleSubmit}
-                  className=" d-flex flex-column justify-content-center p-4 "
-                >
-                  <Form.Group
-                    className="mb-3"
-                    controlId="exampleForm.ControlTextarea1"
-                  >
-                    <Form.Label>Description</Form.Label>
-                    <Form.Control
-                      as="textarea"
-                      rows={3}
-                      name="description"
-                      placeholder=" type what you want to say about this service..."
-                      required
-                    />
-                  </Form.Group>
-
-                  <div className="d-flex justify-content-center  mt-3">
-                    <Button
-                      className="fw-semibold btn-register px-5"
-                      variant="primary"
-                      type="submit"
-                    >
-                      ADD REVIEW
-                    </Button>
-                  </div>
-                </Form>
-              </div>
+              <h4 className="py-4 text-center fs-2">
+                Add a New <span className="text-info">Review</span>
+              </h4>
+              <p className="text-center w-75 mx-auto">
+                On the other hand, we denounce with righteous indignation and
+                dislike men who are so beguiled and demoralized
+              </p>
             </div>
+            <Form
+              onSubmit={handleSubmit}
+              className=" d-flex flex-column justify-content-center p-4 "
+            >
+              <Form.Group
+                className="mb-3"
+                controlId="exampleForm.ControlTextarea1"
+              >
+                <Form.Label>Description</Form.Label>
+                <Form.Control
+                  as="textarea"
+                  rows={3}
+                  name="description"
+                  placeholder=" type what you want to say about this service..."
+                  required
+                />
+              </Form.Group>
+
+              <div className="d-flex justify-content-center  mt-3">
+                <Button
+                  className="fw-semibold btn-register px-5"
+                  variant="primary"
+                  type="submit"
+                >
+                  ADD REVIEW
+                </Button>
+              </div>
+            </Form>
           </div>
         </div>
       </div>
