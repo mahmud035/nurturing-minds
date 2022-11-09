@@ -11,6 +11,10 @@ const MyReview = () => {
   useSetTitle('My Review');
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     fetch(`http://localhost:5000/reviews?email=${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
@@ -22,6 +26,7 @@ const MyReview = () => {
       });
   }, [user?.email]);
 
+  // Delete Singe Review
   const handleDeleteReview = (_id) => {
     const agree = window.confirm('Are you sure you want to delete the review?');
 
@@ -33,7 +38,7 @@ const MyReview = () => {
         .then((data) => {
           console.log(data);
           if (data.deletedCount) {
-            toast.success('Deleted Successfully');
+            toast.success('Review Deleted Successfully');
             const remainingReviews = myReviews.filter(
               (review) => review._id !== _id
             );
@@ -44,18 +49,30 @@ const MyReview = () => {
   };
 
   return (
-    <div className="container">
-      <h3 className="text-center py-4">My Reviews: {myReviews.length}</h3>
+    <div>
+      {myReviews.length === 0 ? (
+        <>
+          <h1 className="d-flex justify-content-center align-items-center vh-100">
+            No reviews were added
+          </h1>
+        </>
+      ) : (
+        <>
+          <div className="container">
+            <h3 className="text-center py-4">My Reviews: {myReviews.length}</h3>
 
-      <div className="review-card-container pb-5">
-        {myReviews?.map((review, index) => (
-          <MyReviewCard
-            key={index}
-            review={review}
-            handleDeleteReview={handleDeleteReview}
-          ></MyReviewCard>
-        ))}
-      </div>
+            <div className="review-card-container pb-5">
+              {myReviews?.map((review, index) => (
+                <MyReviewCard
+                  key={index}
+                  review={review}
+                  handleDeleteReview={handleDeleteReview}
+                ></MyReviewCard>
+              ))}
+            </div>
+          </div>
+        </>
+      )}
     </div>
   );
 };
