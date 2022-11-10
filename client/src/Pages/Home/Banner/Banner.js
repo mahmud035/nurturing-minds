@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 const Banner = () => {
   return (
-    <div className="carousel-container">
+    <div className="carousel-container ">
       <Carousel fade>
         <Carousel.Item>
           <div className="carousel-img">
