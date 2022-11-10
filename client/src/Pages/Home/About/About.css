@@ -1,3 +1,17 @@
 .home-page-about-section {
   background-color: #1a374d;
 }
+
+.about-card {
+  border: none;
+  border-radius: 5px;
+  background-color: #205375;
+  color: #fff;
+  font-size: 18px;
+  transition: all 0.35s ease-in-out;
+}
+
+.about-card:hover {
+  background-color: #256d85;
+  cursor: pointer;
+}

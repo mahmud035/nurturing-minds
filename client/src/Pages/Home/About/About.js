@@ -8,7 +8,7 @@ const About = () => {
   return (
     <div className="home-page-about-section py-5">
       <div className="container py-5">
-        <div className="card mb-0 border-0">
+        <div className="about-card card mb-0 border-0">
           <div className="row g-5">
             <div className="col-md-5">
               <img
@@ -50,13 +50,13 @@ const About = () => {
                   </li>
                 </ul>
                 <div className="d-flex gap-3 py-4">
-                  <Link to="https://www.facebook.com/">
+                  <Link to="/" style={{ color: 'white' }}>
                     <FaFacebookSquare size={32} />
                   </Link>
-                  <Link to="https://twitter.com/i/flow/login">
+                  <Link to="/" style={{ color: 'white' }}>
                     <FaTwitterSquare size={32} />
                   </Link>
-                  <Link to="https://www.linkedin.com/login">
+                  <Link to="/" style={{ color: 'white' }}>
                     <FaLinkedin size={32} />
                   </Link>
                 </div>
