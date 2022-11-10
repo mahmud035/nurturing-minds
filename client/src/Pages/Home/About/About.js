@@ -20,7 +20,7 @@ const About = () => {
             <div className="col-md-7">
               <div className="card-body py-4">
                 <h5 className="card-title">Hi! do you need</h5>
-                <h1>Psychological Support ?</h1>
+                <h1 style={{ color: 'aqua' }}>Psychological Support ?</h1>
                 <div className="d-flex gap-2">
                   <h5 className="card-title fw-bold">I'm Dr. Faruk Hossain,</h5>
                   <small className="mt-1"> (Psychiatrist)</small>
