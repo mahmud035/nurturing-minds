@@ -22,10 +22,12 @@ const Banner = () => {
                 <br />
                 BUT IT'S A COMBINATION OF
                 <br />
-                MOMENTS
+                MOMENTS.
               </h3>
               <Link to="/book-session">
-                <Button variant="dark">Book Session</Button>
+                <Button className="btn-appointment" variant="dark">
+                  Book Session
+                </Button>
               </Link>
             </div>
           </Carousel.Caption>
@@ -39,10 +41,12 @@ const Banner = () => {
             <div className="slide-content">
               <h3 className="fs-1 fw-bold">
                 THINK POSITIVE AND LIVE POSITIVE <br />
-                LIFE WITH HAPPINESS
+                LIFE WITH HAPPINESS.
               </h3>
               <Link to="/book-session">
-                <Button variant="dark">Book Session</Button>
+                <Button className="btn-appointment" variant="dark">
+                  Book Session
+                </Button>
               </Link>
             </div>
           </Carousel.Caption>
@@ -55,10 +59,12 @@ const Banner = () => {
           <Carousel.Caption>
             <div className="slide-content">
               <h3 className="fs-1 fw-bold">
-                MAKE YOUR LIFE GOOD NOT ONLY <br /> OUTSIDE BUT ALSO INSIDE
+                MAKE YOUR LIFE GOOD NOT ONLY <br /> OUTSIDE BUT ALSO INSIDE.
               </h3>
               <Link to="/book-session">
-                <Button variant="dark">Book Session</Button>
+                <Button className="btn-appointment" variant="dark">
+                  Book Session
+                </Button>
               </Link>
             </div>
           </Carousel.Caption>

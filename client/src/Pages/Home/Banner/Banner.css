@@ -6,13 +6,29 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   min-height: 600px;
 }
 
 .slide-content h3 {
-  /* text-align: left; */
-  color: rgb(48, 63, 159);
+  text-align: left;
+  /* color: rgb(48, 63, 159); */
+  color: #207398;
+  padding-bottom: 1rem;
+}
+
+.btn-appointment {
+  /* background: rgb(48, 63, 159); */
+  background: #207398;
+  border: none;
+  outline: none;
+  padding: 0.5rem 1.3rem;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+}
+
+.btn-appointment:hover {
+  background: #000;
 }
 
 .carousel-img {
@@ -28,9 +44,5 @@
   width: 100%;
   height: 100%;
   display: inline-block;
-  background: linear-gradient(
-    to right,
-    rgba(104, 118, 133, 0) 100%,
-    rgba(21, 21, 21, 0) 100%
-  );
+  background: linear-gradient(to right, #eeecec67 0%, rgba(21, 21, 21, 0) 100%);
 }
