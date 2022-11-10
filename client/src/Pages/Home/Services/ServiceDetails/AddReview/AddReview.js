@@ -63,8 +63,9 @@ const AddReview = ({ service }) => {
                 Add a New <span className="text-info">Review</span>
               </h4>
               <p className="text-center w-75 mx-auto">
-                On the other hand, we denounce with righteous indignation and
-                dislike men who are so beguiled and demoralized
+                Share your thought about this service. What do you think about
+                the quality of the treatment, which part helps you most to
+                overcome your problem? What needs to be improved?
               </p>
             </div>
             <Form

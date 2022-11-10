@@ -3,11 +3,11 @@ import './Home.css';
 import Banner from '../Banner/Banner';
 import Services from '../Services/Services';
 import About from '../About/About';
-import Gallery from '../Gallery/Gallery';
-import CoursePackages from '../CoursePackages/CoursePackages';
 import Appointment from '../../Appointment/Appointment';
 import useSetTitle from '../../../hooks/useSetTitle';
 import Contact from '../Contact/Contact';
+// import Gallery from '../Gallery/Gallery';
+// import CoursePackages from '../CoursePackages/CoursePackages';
 
 const Home = () => {
   useSetTitle('Home');
@@ -21,8 +21,8 @@ const Home = () => {
       <Banner></Banner>
       <About></About>
       <Services></Services>
-      <CoursePackages></CoursePackages>
-      <Gallery></Gallery>
+      {/* <CoursePackages></CoursePackages> */}
+      {/* <Gallery></Gallery> */}
       <Appointment></Appointment>
       <Contact></Contact>
     </div>

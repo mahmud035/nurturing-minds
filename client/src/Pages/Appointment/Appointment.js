@@ -42,8 +42,9 @@ const Appointment = () => {
             <div>
               <h4 className="py-4 text-center fs-2">Make an Appointment</h4>
               <p className="text-center w-75 mx-auto">
-                On the other hand, we denounce with righteous indignation and
-                dislike men who are so beguiled and demoralized
+                Your intake appointment can take one to two hours. You'll fill
+                out paperwork and assessments to help determine a diagnosis.
+                After that, you'll have a conversation with the psychiatrist.
               </p>
             </div>
             <Form

@@ -20,9 +20,8 @@ const DisplayReviews = ({ service }) => {
   return (
     <div className="container">
       <div className="text-center py-5">
-        <h2>Testimonial</h2>
-        <p>What Other People Say About This Service</p>
-        <p>display reviews: {reviews.length}</p>
+        <h2>Clients's Review</h2>
+        <p>See What Other People Say About This Service</p>
       </div>
 
       <div className="review-card-container pb-5">

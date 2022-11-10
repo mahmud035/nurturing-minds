@@ -8,25 +8,46 @@ const About = () => {
   return (
     <div className="container pt-5">
       <div className="card mb-3 border-0">
-        <div className="row g-0">
-          <div className="col-md-4">
-            <img src={person} className="img-fluid rounded-start" alt="..." />
+        <div className="row g-5">
+          <div className="col-md-5">
+            <img
+              src={person}
+              className="img-fluid rounded-start h-100"
+              alt="..."
+            />
           </div>
-          <div className="col-md-8">
+          <div className="col-md-7">
             <div className="card-body">
               <h5 className="card-title">Hi! do you need</h5>
               <h1>Psychological Support ?</h1>
-              <h5 className="card-title">I'm Doctor KB Arif,</h5>
-              <small> Psychiatrist</small>
+              <div className="d-flex gap-2">
+                <h5 className="card-title fw-bold">I'm Dr. Faruk Hossain,</h5>
+                <small className="mt-1"> (Psychiatrist)</small>
+              </div>
+              <strong className="fw-semibold d-block pb-2">
+                MBBS, MCPS, MPHIL (Psychiatry), MACP (USA), FRCP (UK)
+              </strong>
 
               <p className="card-text">
-                Perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque antium, totam rem aperiam, eaque ipsa
-                quae ab illo inventore veritatis et quasi architecto beatae
-                vitae dicta sunt explicabo. Nemo enim ipsam Perspiciatis unde
-                omnis iste natus error sit voluptatem accusantium doloremque
-                antium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                My mission is to contribute the mental health through quality
+                teaching, training, research, and <strong>services.</strong>
               </p>
+
+              <ul>
+                <li>
+                  Offering best possible patient care with updated treatment
+                  options
+                </li>
+                <li>
+                  Skilled in Biopsychosocial Assessment, Crisis Intervention,
+                  Clinical Supervision, Dual Diagnosis and Prevention
+                </li>
+                <li>
+                  Obtained professional training extensive rotation in highly
+                  reputed psychiatric hospitals and Institutions both home and
+                  abroad.
+                </li>
+              </ul>
               <div className="d-flex gap-3 py-4">
                 <Link to="https://www.facebook.com/">
                   <FaFacebookSquare size={32} />
@@ -39,7 +60,7 @@ const About = () => {
                 </Link>
               </div>
               <p>
-                <strong>Mail me: </strong> mymail@yourdomail.com
+                <strong>Mail me: </strong> hossain07@gmail.com
               </p>
               <p>
                 <strong>Call me:</strong> +8801254 256 659

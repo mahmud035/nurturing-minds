@@ -57,8 +57,8 @@ const AddService = () => {
                   Add a New <span>Service</span>
                 </h4>
                 <p className="text-center w-75 mx-auto">
-                  On the other hand, we denounce with righteous indignation and
-                  dislike men who are so beguiled and demoralized
+                  Add a new service that you think you need that particular
+                  service.
                 </p>
               </div>
               <Form

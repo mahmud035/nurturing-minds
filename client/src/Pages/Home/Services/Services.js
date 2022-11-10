@@ -26,9 +26,9 @@ const Services = () => {
           <div className="text-center">
             <h2>My Services</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Luctus
-              mattis, pulvinar leo Fusce quis urna metus. Donec et lacus et sem
-              lacinia cursus.
+              Your problems can be depression, anxiety, bipolar disorders,
+              relationship thoughts of suicide, or others. I am here to help you
+              to overcome your problem.
             </p>
           </div>
         </Col>
