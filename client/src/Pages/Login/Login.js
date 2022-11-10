@@ -7,6 +7,7 @@ import { toast } from 'react-toastify';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useSetTitle from '../../hooks/useSetTitle';
 import { setAuthToken } from '../../auth token/setAuthToken';
+import { CirclesWithBar } from 'react-loader-spinner';
 
 const Login = () => {
   const { logIn, passwordReset } = useContext(AuthContext);
@@ -25,6 +26,16 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    <CirclesWithBar
+      height="60"
+      width="60"
+      color="#38D4C6"
+      wrapperStyle={{}}
+      wrapperClass="d-flex justify-content-center align-items-center  vh-100"
+      visible={true}
+      ariaLabel="circles-with-bar-loading"
+    />;
+
     const form = e.target;
 
     const email = form.email.value;
@@ -33,6 +44,19 @@ const Login = () => {
     logIn(email, password)
       .then((result) => {
         const user = result.user;
+
+        user && (
+          <CirclesWithBar
+            height="60"
+            width="60"
+            color="#38D4C6"
+            wrapperStyle={{}}
+            wrapperClass="d-flex justify-content-center align-items-center vh-100"
+            visible={false}
+            ariaLabel="circles-with-bar-loading"
+          />
+        );
+
         // console.log(user);
         toast.success('Login Successfully');
 

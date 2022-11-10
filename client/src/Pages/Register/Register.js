@@ -10,6 +10,7 @@ import { FcGoogle } from 'react-icons/fc';
 import { BsGithub } from 'react-icons/bs';
 import useSetTitle from '../../hooks/useSetTitle';
 import { setAuthToken } from '../../auth token/setAuthToken';
+import { CirclesWithBar } from 'react-loader-spinner';
 
 const Register = () => {
   const { createUser, googleSignIn, githubSignIn, updateUserProfile } =
@@ -24,6 +25,16 @@ const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    <CirclesWithBar
+      height="60"
+      width="60"
+      color="#38D4C6"
+      wrapperStyle={{}}
+      wrapperClass="d-flex justify-content-center align-items-center  vh-100"
+      visible={true}
+      ariaLabel="circles-with-bar-loading"
+    />;
 
     const form = e.target;
     const name = form.name.value;
@@ -40,6 +51,19 @@ const Register = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
+
+        user && (
+          <CirclesWithBar
+            height="60"
+            width="60"
+            color="#38D4C6"
+            wrapperStyle={{}}
+            wrapperClass="d-flex justify-content-center align-items-center vh-100"
+            visible={false}
+            ariaLabel="circles-with-bar-loading"
+          />
+        );
+
         toast.success('Account Created Successfully');
 
         //* JWT Token
