@@ -5,7 +5,7 @@ import Form from 'react-bootstrap/Form';
 import { AuthContext } from '../../../../../context/AuthProvider/AuthProvider';
 import { toast } from 'react-toastify';
 
-const AddReview = ({ service }) => {
+const AddReview = ({ service, reviews, setReviews }) => {
   const { user } = useContext(AuthContext);
   const { _id, serviceName } = service;
 
@@ -44,8 +44,10 @@ const AddReview = ({ service }) => {
       .then((data) => {
         // console.log(data);
         if (data.acknowledged) {
+          // console.log(data);
           toast.success('Review added Successfully');
           form.reset();
+          setReviews([review, ...reviews]);
         }
       })
       .catch((error) => {

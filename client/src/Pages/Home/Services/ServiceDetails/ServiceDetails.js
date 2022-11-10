@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Button } from 'react-bootstrap';
 import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../../../context/AuthProvider/AuthProvider';
@@ -10,13 +10,25 @@ import './ServiceDetails.css';
 const ServiceDetails = () => {
   const service = useLoaderData() || {};
   const { user } = useContext(AuthContext);
-  const { serviceName, price, imageURL, description } = service;
+  const { _id, serviceName, price, imageURL, description } = service;
   useSetTitle('Service Details');
+  const [reviews, setReviews] = useState([]);
   // console.log(service);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  useEffect(() => {
+    fetch(`https://nurturing-minds-server-side.vercel.app/reviews/${_id}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setReviews(data);
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  }, [_id]);
 
   return (
     <div className="service-details-page">
@@ -29,6 +41,7 @@ const ServiceDetails = () => {
             Back
           </Button>
         </Link>
+        {/* Show Service in Details */}
         <div className="service-details-card card mb-3 ">
           <img src={imageURL} className=" card-img-top" alt="..." />
           <div className="card-body px-4">
@@ -43,10 +56,14 @@ const ServiceDetails = () => {
 
       {/* Review Section */}
       <div>
-        <DisplayReviews service={service}></DisplayReviews>
+        <DisplayReviews reviews={reviews}></DisplayReviews>
         {user?.email && user?.uid ? (
           <>
-            <AddReview service={service}></AddReview>
+            <AddReview
+              service={service}
+              reviews={reviews}
+              setReviews={setReviews}
+            ></AddReview>
           </>
         ) : (
           <>
