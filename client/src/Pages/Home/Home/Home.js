@@ -17,7 +17,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
+    <div className="home-page">
       <Banner></Banner>
       <About></About>
       <Services></Services>

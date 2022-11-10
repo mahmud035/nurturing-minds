@@ -32,32 +32,36 @@ const AllService = () => {
 
   // console.log(services);
   return (
-    <Container className="py-5">
-      <Row>
-        <Col>
-          <div className="text-center">
-            <h2>My Services</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Luctus
-              mattis, pulvinar leo Fusce quis urna metus. Donec et lacus et sem
-              lacinia cursus.
-            </p>
-          </div>
-        </Col>
-      </Row>
-      <Row>
-        <Col>
-          <div className="service-card-container">
-            {services.map((service, index) => (
-              <ServiceSummaryCard
-                key={index}
-                service={service}
-              ></ServiceSummaryCard>
-            ))}
-          </div>
-        </Col>
-      </Row>
-    </Container>
+    <div className="all-service-page pb-5">
+      <Container className="py-5">
+        <Row>
+          <Col>
+            <div className="text-center text-white pb-5">
+              <h2 className="fs-1">
+                My <span style={{ color: 'aqua' }}>Services</span>
+              </h2>
+              <p className="fw-semibold ">
+                Your problems can be depression, anxiety, bipolar disorders,
+                relationship thoughts of suicide, or others. I am here to help
+                you to overcome your problem.
+              </p>
+            </div>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <div className="service-card-container">
+              {services.map((service, index) => (
+                <ServiceSummaryCard
+                  key={index}
+                  service={service}
+                ></ServiceSummaryCard>
+              ))}
+            </div>
+          </Col>
+        </Row>
+      </Container>
+    </div>
   );
 };
 

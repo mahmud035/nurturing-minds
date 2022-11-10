@@ -11,7 +11,7 @@ const ServiceSummaryCard = ({ service }) => {
   return (
     <PhotoProvider>
       <div>
-        <Card className="service-summary-card h-100">
+        <Card className="service-summary-card h-100 pb-2">
           <PhotoView src={imageURL} key={_id}>
             <Card.Img variant="top" src={imageURL} />
           </PhotoView>
@@ -23,7 +23,12 @@ const ServiceSummaryCard = ({ service }) => {
               Price: <span>{price}</span>
             </h3>
             <Link to={`/services/${_id}`}>
-              <Button variant="primary">See Details</Button>
+              <Button
+                variant="info"
+                className="rounded-pill  fw-semibold btn-register text-white  mt-2 w-100"
+              >
+                See Details
+              </Button>
             </Link>
           </Card.Body>
         </Card>

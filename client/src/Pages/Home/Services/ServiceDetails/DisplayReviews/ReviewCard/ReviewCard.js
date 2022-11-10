@@ -11,7 +11,7 @@ const ReviewCard = ({ review }) => {
 
   return (
     <div>
-      <Card className="h-100">
+      <Card className="review-card h-100">
         <div className="p-3 d-flex gap-3">
           <Image
             roundedCircle

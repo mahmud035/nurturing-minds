@@ -1,3 +1,26 @@
+.service-summary-card {
+  border: none;
+  border-radius: 5px;
+
+  /* border: 3px solid;
+  padding: 10px;
+  border-image-source: linear-gradient(
+    45deg,
+    rgb(196, 97, 97),
+    rgba(75, 75, 207, 0.76)
+  );
+  border-image-slice: 1; */
+  background-color: #256d85;
+  color: #fff;
+  font-size: 18px;
+  transition: all 0.35s ease-in-out;
+}
+
+.service-summary-card:hover {
+  background-color: #205375;
+  cursor: pointer;
+}
+
 .service-summary-card img {
   height: 260px;
   cursor: pointer;

@@ -19,17 +19,20 @@ const ServiceDetails = () => {
   }, []);
 
   return (
-    <div>
+    <div className="service-details-page">
       <div className="container pt-4">
         <Link to="/services" className="mb-4 d-block">
-          <Button variant="info" size="sm">
+          <Button
+            variant="info"
+            className="rounded-pill  fw-semibold btn-register text-white"
+          >
             Back
           </Button>
         </Link>
-        <div className="service-details-card card mb-3">
+        <div className="service-details-card card mb-3 ">
           <img src={imageURL} className=" card-img-top" alt="..." />
-          <div className="card-body">
-            <h5 className="card-title">{serviceName}</h5>
+          <div className="card-body px-4">
+            <h3 className="card-title">{serviceName}</h3>
             <p className="card-text">{description}</p>
             <h3 className="py-3">
               Price: <span>{price}</span>
@@ -47,9 +50,13 @@ const ServiceDetails = () => {
           </>
         ) : (
           <>
-            <h5 className="text-center pb-4">
-              Please <Link to="/login">Login</Link> to add a review.
-            </h5>
+            <h3 className="text-center pb-5 text-white mb-0">
+              Please&nbsp;
+              <Link to="/login" style={{ color: '#36beca' }}>
+                Login
+              </Link>
+              &nbsp;to add a review.
+            </h3>
           </>
         )}
       </div>

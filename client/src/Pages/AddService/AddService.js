@@ -54,7 +54,7 @@ const AddService = () => {
             <div className="profile-page-form-container">
               <div>
                 <h4 className="py-4 text-center fs-2">
-                  Add a New <span>Service</span>
+                  Add a <span style={{ color: 'aqua' }}>New Service</span>
                 </h4>
                 <p className="text-center w-75 mx-auto">
                   Add a new service that you think you need that particular

@@ -1,0 +1,12 @@
+.review-card {
+  border: none;
+  border-radius: 5px;
+  background-color: #256d85;
+  color: #fff;
+  font-size: 18px;
+  transition: all 0.35s ease-in-out;
+}
+
+.review-card:hover {
+  background-color: #205375;
+}

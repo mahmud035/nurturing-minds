@@ -1,3 +1,22 @@
+.service-details-page {
+  background-color: #1a374d;
+}
+
+.service-details-card {
+  border: none;
+  border-radius: 5px;
+
+  background-color: #256d85;
+  color: #fff;
+  font-size: 18px;
+  transition: all 0.35s ease-in-out;
+}
+
+.service-details-card:hover {
+  background-color: #205375;
+}
+
 .service-details-card img {
   max-height: 550px;
+  cursor: pointer;
 }

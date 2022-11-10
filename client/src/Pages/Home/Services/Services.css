@@ -3,3 +3,8 @@
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 1.5rem;
 }
+
+.home-page-service-section {
+  background-color: #1d3e53;
+  color: #fff;
+}

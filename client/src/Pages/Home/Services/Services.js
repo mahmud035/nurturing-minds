@@ -20,43 +20,48 @@ const Services = () => {
   }, []);
 
   return (
-    <Container>
-      <Row>
-        <Col>
-          <div className="text-center">
-            <h2>My Services</h2>
-            <p>
-              Your problems can be depression, anxiety, bipolar disorders,
-              relationship thoughts of suicide, or others. I am here to help you
-              to overcome your problem.
-            </p>
-          </div>
-        </Col>
-      </Row>
-      <Row>
-        <Col>
-          <div className="service-card-container">
-            {services.map((service, index) => (
-              <ServiceSummaryCard
-                key={index}
-                service={service}
-              ></ServiceSummaryCard>
-            ))}
-          </div>
-        </Col>
-      </Row>
-      {services.length === 3 && (
+    <div className="py-5 home-page-service-section">
+      <Container>
         <Row>
           <Col>
-            <Link to="/services">
-              <Button className="mt-5 d-block mx-auto" variant="primary">
+            <div className="text-center">
+              <h2>
+                My <span style={{ color: 'aqua' }}>Services</span>
+              </h2>
+              <p>
+                Your problems can be depression, anxiety, bipolar disorders,
+                relationship thoughts of suicide, or others. I am here to help
+                you to overcome your problem.
+              </p>
+            </div>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <div className="service-card-container">
+              {services.map((service, index) => (
+                <ServiceSummaryCard
+                  key={index}
+                  service={service}
+                ></ServiceSummaryCard>
+              ))}
+            </div>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <Link to="/services" className="text-decoration-none">
+              <Button
+                className="fw-semibold btn-register text-white mt-5 d-block mx-auto"
+                variant="primary"
+              >
                 See All Services
               </Button>
             </Link>
           </Col>
         </Row>
-      )}
-    </Container>
+      </Container>
+    </div>
   );
 };
 

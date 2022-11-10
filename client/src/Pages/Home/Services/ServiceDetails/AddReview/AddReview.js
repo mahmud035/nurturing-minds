@@ -55,12 +55,12 @@ const AddReview = ({ service }) => {
 
   return (
     <div className="profile-page py-5">
-      <div className="min-vh-100 container pb-5">
+      <div className="vh-100 container pb-5">
         <div>
           <div className="profile-page-form-container">
             <div>
               <h4 className="py-4 text-center fs-2">
-                Add a New <span className="text-info">Review</span>
+                Add a <span style={{ color: 'aqua' }}>New Review</span>
               </h4>
               <p className="text-center w-75 mx-auto">
                 Share your thought about this service. What do you think about

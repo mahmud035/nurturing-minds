@@ -8,8 +8,8 @@ const Contact = () => {
     <div>
       <div className="text-center py-5 contact-section-text">
         <h4>Contact</h4>
-        <h2>Find Me on a Map</h2>
-        <p>
+        <h2 style={{ color: 'aqua' }}>Find Me on a Map</h2>
+        <p className="fw-semibold">
           Provide a wide range of specialist services for private clients and
           offer confidential services for professionals.
         </p>

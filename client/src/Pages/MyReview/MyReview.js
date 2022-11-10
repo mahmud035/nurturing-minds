@@ -70,17 +70,19 @@ const MyReview = () => {
   };
 
   return (
-    <div>
+    <div className="my-review-page">
       {myReviews.length === 0 ? (
         <>
-          <h1 className="d-flex justify-content-center align-items-center vh-100">
+          <h1 className="d-flex justify-content-center align-items-center vh-100 text-white">
             No reviews were added
           </h1>
         </>
       ) : (
         <>
-          <div className="container">
-            <h3 className="text-center py-4">My Reviews: {myReviews.length}</h3>
+          <div className="container py-5">
+            <h3 className="text-center text-white py-4">
+              See All Of <span style={{ color: 'aqua' }}>Your Reviews</span>
+            </h3>
 
             <div className="review-card-container pb-5">
               {myReviews?.map((review, index) => (

@@ -14,7 +14,7 @@ const MyReviewCard = ({ review, handleDeleteReview }) => {
 
   return (
     <div>
-      <Card className="h-100">
+      <Card className="review-card h-100">
         <div className="p-3 d-flex gap-3">
           <Image
             roundedCircle
@@ -36,9 +36,18 @@ const MyReviewCard = ({ review, handleDeleteReview }) => {
 
           <div className="d-flex gap-3">
             <Link to={`/edit/${_id}`}>
-              <Button variant="info">Edit Review</Button>
+              <Button
+                variant="info"
+                className="fw-semibold btn-register text-white"
+              >
+                Edit Review
+              </Button>
             </Link>
-            <Button onClick={() => handleDeleteReview(_id)} variant="danger">
+            <Button
+              onClick={() => handleDeleteReview(_id)}
+              variant="danger"
+              className="btn-delete fw-semibold text-white"
+            >
               Delete Review
             </Button>
           </div>

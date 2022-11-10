@@ -35,12 +35,14 @@ const Appointment = () => {
   };
 
   return (
-    <div className="profile-page py-5">
-      <div className="min-vh-100 container pb-5">
+    <div className="profile-page pt-5 ">
+      <div className="vh-100 container py-5">
         <div>
           <div className="profile-page-form-container">
             <div>
-              <h4 className="py-4 text-center fs-2">Make an Appointment</h4>
+              <h4 className="py-4 text-center fs-2">
+                Make an <span style={{ color: 'aqua' }}>Appointment</span>
+              </h4>
               <p className="text-center w-75 mx-auto">
                 Your intake appointment can take one to two hours. You'll fill
                 out paperwork and assessments to help determine a diagnosis.
