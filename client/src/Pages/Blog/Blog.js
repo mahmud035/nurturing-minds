@@ -9,7 +9,7 @@ const Blog = () => {
   return (
     <div className="accordion-container">
       <h1>Questions & Answer</h1>
-      <Accordion className="w-50 mx-auto accordion-content" flush>
+      <Accordion className="w-50 mx-auto accordion-content">
         <Accordion.Item eventKey="0">
           <Accordion.Header>Difference between SQL and NoSQL</Accordion.Header>
 
