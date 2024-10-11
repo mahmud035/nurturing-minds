@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
-import { useLoaderData } from 'react-router-dom';
-import './AllService.css';
+import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import ServiceSummaryCard from '../ServiceSummaryCard/ServiceSummaryCard';
-import useSetTitle from '../../../../hooks/useSetTitle';
 import { CirclesWithBar } from 'react-loader-spinner';
+import { useLoaderData } from 'react-router-dom';
+import useSetTitle from '../../../../hooks/useSetTitle';
+import ServiceSummaryCard from '../ServiceSummaryCard/ServiceSummaryCard';
+import './AllService.css';
 
 const AllService = () => {
   const services = useLoaderData() || [];
@@ -30,7 +30,6 @@ const AllService = () => {
     );
   }
 
-  // console.log(services);
   return (
     <div className="all-service-page pb-5">
       <Container className="py-5">

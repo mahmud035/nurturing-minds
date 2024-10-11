@@ -38,12 +38,11 @@ const MyReview = () => {
         return res.json();
       })
       .then((data) => {
-        // console.log(data);
         toast.error(data.message);
         setMyReviews(data);
       })
       .catch((error) => {
-        console.log(error.message);
+        console.error(error.message);
       });
   }, [user?.email, logOut, navigate]);
 
@@ -57,7 +56,6 @@ const MyReview = () => {
       })
         .then((res) => res.json())
         .then((data) => {
-          console.log(data);
           if (data.deletedCount) {
             toast.success('Review Deleted Successfully');
             const remainingReviews = myReviews.filter(

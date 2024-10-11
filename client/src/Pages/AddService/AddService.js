@@ -1,10 +1,9 @@
-import React, { useEffect } from 'react';
-import useSetTitle from '../../hooks/useSetTitle';
-import './AddService.css';
+import { useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import useSetTitle from '../../hooks/useSetTitle';
 
 const AddService = () => {
   const navigate = useNavigate();
@@ -14,8 +13,6 @@ const AddService = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  // st emailRef = useRef(user?.email);
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -24,7 +21,6 @@ const AddService = () => {
     const price = form.price.value;
     const imageURL = form.photoURL.value;
     const description = form.description.value;
-    // console.log(serviceName, price, imageURL, description);
 
     const service = { serviceName, price, imageURL, description };
 
@@ -35,14 +31,13 @@ const AddService = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         if (data.acknowledged) {
           toast.success('Service Added Successfully');
           navigate('/services');
         }
       })
       .catch((error) => {
-        console.log(error.message);
+        console.error(error.message);
       });
   };
 

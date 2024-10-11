@@ -1,10 +1,10 @@
 import React, { useContext, useEffect } from 'react';
-import { Link, useLoaderData, useNavigate } from 'react-router-dom';
-import './EditReview.css';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { AuthContext } from '../../../context/AuthProvider/AuthProvider';
+import { Link, useLoaderData, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import { AuthContext } from '../../../context/AuthProvider/AuthProvider';
+import './EditReview.css';
 
 const EditReview = () => {
   const { user } = useContext(AuthContext);
@@ -15,8 +15,6 @@ const EditReview = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  console.log(storedReview);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -40,8 +38,6 @@ const EditReview = () => {
       description,
     };
 
-    console.log(updatedReview);
-
     fetch(`https://nurturing-minds-server-side.vercel.app/reviews/${_id}`, {
       method: 'PUT',
       headers: {
@@ -51,7 +47,6 @@ const EditReview = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         if (data.modifiedCount > 0) {
           toast.success('Review Updated');
           form.reset();
@@ -59,7 +54,7 @@ const EditReview = () => {
         }
       })
       .catch((error) => {
-        console.log(error.message);
+        console.error(error.message);
       });
   };
 

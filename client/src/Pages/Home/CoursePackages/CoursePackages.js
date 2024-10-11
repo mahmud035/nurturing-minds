@@ -1,6 +1,3 @@
-import React from 'react';
-import './CoursePackages.css';
-
 const CoursePackages = () => {
   return (
     <div>

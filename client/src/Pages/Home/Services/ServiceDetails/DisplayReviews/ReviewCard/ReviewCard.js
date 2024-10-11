@@ -1,13 +1,12 @@
 import React from 'react';
-import './ReviewCard.css';
-import Card from 'react-bootstrap/Card';
 import { Image } from 'react-bootstrap';
+import Card from 'react-bootstrap/Card';
 import { FaUser } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
+import './ReviewCard.css';
 
 const ReviewCard = ({ review }) => {
   const { userName, userEmail, serviceName, photoURL, description } = review;
-  // console.log(review);
 
   return (
     <div>

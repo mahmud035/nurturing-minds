@@ -13,7 +13,6 @@ const ServiceDetails = () => {
   const { _id, serviceName, price, imageURL, description } = service;
   useSetTitle('Service Details');
   const [reviews, setReviews] = useState([]);
-  // console.log(service);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -26,7 +25,7 @@ const ServiceDetails = () => {
         setReviews(data);
       })
       .catch((error) => {
-        console.log(error.message);
+        console.error(error.message);
       });
   }, [_id]);
 

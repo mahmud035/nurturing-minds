@@ -30,7 +30,6 @@ const Register = () => {
     const photoURL = form.photo.value;
     const email = form.email.value;
     const password = form.password.value;
-    console.log(name, photoURL, email, password);
 
     if (!photoURL) {
       toast.info('Please provide a valid photo URL');
@@ -39,7 +38,6 @@ const Register = () => {
     createUser(email, password)
       .then((result) => {
         const user = result.user;
-        console.log(user);
 
         toast.success('Account Created Successfully');
 
@@ -59,7 +57,6 @@ const Register = () => {
     googleSignIn()
       .then((result) => {
         const user = result.user;
-        console.log(user);
         toast.success('Account Created Successfully');
 
         //* JWT Token
@@ -77,7 +74,6 @@ const Register = () => {
     githubSignIn()
       .then((result) => {
         const user = result.user;
-        console.log(user);
         toast.success('Account Created Successfully');
 
         //* JWT Token

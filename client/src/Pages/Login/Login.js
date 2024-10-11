@@ -47,7 +47,6 @@ const Login = () => {
   };
 
   const handlePasswordReset = () => {
-    console.log(userEmail);
     passwordReset(userEmail)
       .then(() => {
         toast.info('Password reset email sent!');

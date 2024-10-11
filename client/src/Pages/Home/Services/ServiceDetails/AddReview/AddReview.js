@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
-import './AddReview.css';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { AuthContext } from '../../../../../context/AuthProvider/AuthProvider';
 import { toast } from 'react-toastify';
+import { AuthContext } from '../../../../../context/AuthProvider/AuthProvider';
+import './AddReview.css';
 
 const AddReview = ({ service, reviews, setReviews }) => {
   const { user } = useContext(AuthContext);
@@ -31,8 +31,6 @@ const AddReview = ({ service, reviews, setReviews }) => {
       description,
     };
 
-    console.log(review);
-
     fetch('https://nurturing-minds-server-side.vercel.app/review', {
       method: 'POST',
       headers: {
@@ -42,16 +40,14 @@ const AddReview = ({ service, reviews, setReviews }) => {
     })
       .then((res) => res.json())
       .then((data) => {
-        // console.log(data);
         if (data.acknowledged) {
-          // console.log(data);
           toast.success('Review added Successfully');
           form.reset();
           setReviews([review, ...reviews]);
         }
       })
       .catch((error) => {
-        console.log(error.message);
+        console.error(error.message);
       });
   };
 

@@ -12,13 +12,11 @@
 
 .slide-content h3 {
   text-align: left;
-  /* color: rgb(48, 63, 159); */
   color: #207398;
   padding-bottom: 1rem;
 }
 
 .btn-appointment {
-  /* background: rgb(48, 63, 159); */
   background: #207398;
   border: none;
   outline: none;
