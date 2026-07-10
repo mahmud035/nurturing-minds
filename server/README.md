@@ -1,47 +1,58 @@
-## Welcome! 👋
+## Nurturing Minds — Server
 
-#### Project Name: Nurturing Minds
+#### Project Name: Nurturing Minds (server)
 
 #### Live Website: <a href="https://nurturing-minds-client-side.web.app/">Nurturing Minds</a>
 
+> This is the **server** half of the Nurturing Minds monorepo. The React client lives in [`../client`](../client). Full project write-up: [root README](../README.md).
+
 ### Description
 
-The main purpose of Nurturing Minds is to provide mental health services to those suffering from mental illnesses or psychological problems.
+The Nurturing Minds API is a single Express service backed by MongoDB Atlas. It serves the services catalog and review data, and issues JWTs used to scope review reads to the requesting user.
 
-### Features and Functionality
+### Collections
 
-<ul>
-<li>A user can get various kinds of psychological services.</li>
-<li> User can make an appointment / book a one-to-one session. </li>
-<li> They can give their valuable feedback based on their experience.</li> 
-<li> Users can sign up with their email, password, Google account, or Github account.</li>
-<li> Can read various type of blogs</li>
-<li> Modify their feedback or delete it. </li>
-</ul>
+- `services` — mental-health service offerings
+- `reviews` — user reviews, linked to a service and a user email
+
+### Endpoints
+
+| Method | Route | Notes |
+|---|---|---|
+| GET | `/services` | all services |
+| GET | `/few-service` | newest 3 (home-page teaser) |
+| GET | `/services/:id` | single service |
+| GET | `/reviews/:id` | reviews for a service |
+| GET | `/reviews` | **JWT-protected**; token email must match `?email=` (403 otherwise) |
+| GET | `/edit/:id` | a single review to edit |
+| POST | `/jwt` | issue a JWT for a user |
+| POST | `/service` | create a service |
+| POST | `/review` | create a review |
+| PUT | `/reviews/:id` | update a review (upsert) |
+| DELETE | `/reviews/:id` | delete a review |
+
+> Auth note: only the user-scoped `GET /reviews` read is currently protected by `verifyJWT`. The write endpoints (`POST /service`, `POST /review`) are not yet auth-gated — see *What I'd extend next* in the [root README](../README.md).
 
 ### Built with
 
-- React v18
-- React Router v6
-- Firebase Authentication
-- Node
-- Express Js
-- MongoDB
-- React Bootstrap
-- React-Toastify
-- CSS3
-- Rest API
-- Mobile-first workflow
+- Node.js, Express 4.18
+- MongoDB native driver 4.11 (MongoDB Atlas)
+- jsonwebtoken 8.5 (JWT)
+- cors, dotenv, colors
 
-### What I did
+### Run the server
 
-<ul>
-<li>Use React, React Router for build the project </li>
-<li> Use Firebase Authentication for client side authentication</li>
-<li> Use Node, Express, MongoDB for server side </li>
-<li> Create interactive UI </li>
-</ul>
+```bash
+git clone https://github.com/mahmud035/nurturing-minds.git
+cd nurturing-minds/server
+npm install
+node index.js        # http://localhost:5000
+```
 
-### What I learned
+**Environment (`.env`):**
 
-While doing this project gave me a fresh overview of basic react, react-router, react-toasty, Firebase Authentication, Node, Express js, MongoDB and much more. <strong> Specially Mongodb CRUD operation</strong>. Now I have enough understanding about these topics and I am confident about it.
+```
+DB_USER=...
+DB_PASSWORD=...
+ACCESS_TOKEN_SECRET=...
+```
